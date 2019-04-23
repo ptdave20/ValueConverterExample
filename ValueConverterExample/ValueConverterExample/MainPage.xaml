@@ -6,9 +6,8 @@
 
     <StackLayout>
         <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
+        <Label Text="Should see this" IsVisible="{Binding NullString, Converter={StaticResource Key=IsNull}}"/>
+        <Label Text="Should not see this" IsVisible="{Binding NotNullString, Converter={StaticResource Key=IsNull}}"/>
     </StackLayout>
 
 </ContentPage>

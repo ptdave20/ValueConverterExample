@@ -1,8 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Application xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="ValueConverterExample.App">
+             x:Class="ValueConverterExample.App"
+             xmlns:helpers="clr-namespace:ValueConverterExample.Helpers">
     <Application.Resources>
-
+        <ResourceDictionary>
+            <helpers:IsNullConverter x:Key="IsNull"/>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>

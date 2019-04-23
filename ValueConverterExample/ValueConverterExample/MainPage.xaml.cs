@@ -13,9 +13,18 @@ namespace ValueConverterExample
     [DesignTimeVisible(true)]
     public partial class MainPage : ContentPage
     {
+        public class MainPageModel
+        {
+            public string NotNullString { get; set; } = "I'm not null!";
+            public string NullString { get; set; } = null;
+        }
+
+        MainPageModel Model = new MainPageModel();
+
         public MainPage()
         {
             InitializeComponent();
+            BindingContext = Model;
         }
     }
 }
